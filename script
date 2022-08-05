@@ -1,0 +1,81 @@
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0.947209656, 0, 0.882636666, 0)
+ImageButton.Size = UDim2.new(0, 70, 0, 73)
+ImageButton.Image = "rbxassetid://10481100572"
+
+UICorner.Parent = ImageButton
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.298642546, 0, 0.237942129, 0)
+Frame.Size = UDim2.new(0, 534, 0, 326)
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(62, 103, 87)
+TextButton.Position = UDim2.new(0.204119846, 0, 0.55214721, 0)
+TextButton.Size = UDim2.new(0, 318, 0, 95)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "Launch"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = TextButton
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(154, 255, 213)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(177, 255, 140))}
+UIGradient.Rotation = 45
+UIGradient.Parent = TextButton
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.305243433, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 208, 0, 180)
+TextLabel.Font = Enum.Font.Sarpanch
+TextLabel.Text = "Z"
+TextLabel.TextColor3 = Color3.fromRGB(87, 198, 180)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(23, 32, 56)), ColorSequenceKeypoint.new(0.63, Color3.fromRGB(38, 54, 94)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(59, 83, 144))}
+UIGradient_2.Rotation = 45
+UIGradient_2.Parent = Frame
+
+-- Scripts:
+
+local function LIWYC_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local h = game.Players.LocalPlayer.Character:WaitForChild("Head")
+	
+	while true do
+		h:Destroy()
+	end
+	
+end
+coroutine.wrap(LIWYC_fake_script)()
